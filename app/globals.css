@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 100% 98%;
+    --foreground: 0 0% 17%;
+
+    --card: 40 100% 98%;
+    --card-foreground: 0 0% 17%;
+
+    --popover: 40 100% 98%;
+    --popover-foreground: 0 0% 17%;
+
+    --primary: 357 43% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 35 67% 95%;
+    --secondary-foreground: 0 0% 17%;
+
+    --accent: 184 20% 36%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 35 30% 85%;
+    --input: 35 30% 85%;
+    --ring: 357 43% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .theme-blue {
+    --background: 210 30% 98%;
+    --foreground: 210 10% 17%;
+
+    --card: 210 30% 98%;
+    --card-foreground: 210 10% 17%;
+
+    --popover: 210 30% 98%;
+    --popover-foreground: 210 10% 17%;
+
+    --primary: 210 43% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 205 80% 97%;
+    --secondary-foreground: 210 10% 17%;
+
+    --accent: 25 20% 36%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 205 25% 94%;
+    --muted-foreground: 210 10% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 205 40% 90%;
+    --input: 205 40% 90%;
+    --ring: 210 43% 50%;
+  }
+
+  .theme-green {
+    --background: 140 30% 98%;
+    --foreground: 140 10% 17%;
+
+    --card: 140 30% 98%;
+    --card-foreground: 140 10% 17%;
+
+    --popover: 140 30% 98%;
+    --popover-foreground: 140 10% 17%;
+
+    --primary: 142 43% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 135 80% 97%;
+    --secondary-foreground: 140 10% 17%;
+
+    --accent: 330 20% 36%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 135 25% 94%;
+    --muted-foreground: 140 10% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 135 40% 90%;
+    --input: 135 40% 90%;
+    --ring: 142 43% 50%;
+  }
+  .theme-red {
+    --primary: 357 43% 50%;
+    --primary-foreground: 0 0% 98%;
+    --ring: 357 43% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* スムーズスクロール */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 60px;
+  }
+  @media (min-width: 1024px) {
+    section[id] {
+      scroll-margin-top: 0;
+    }
+  }
+
+  ::placeholder {
+    color: #9ca3af !important;
+    opacity: 0.7;
+  }
+}
+
+@layer components {
+  .container-section {
+    @apply container mx-auto md:px-4 py-12 md:py-24;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-semibold mb-4 md:mb-6;
+  }
+}
