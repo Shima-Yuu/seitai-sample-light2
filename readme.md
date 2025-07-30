@@ -1,5 +1,9 @@
 # ライトプラン 2
 
+## URL
+
+https://light2-psi.vercel.app/
+
 ## 開発手順
 
 ### 前提
